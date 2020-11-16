@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Chatbox</title>
+    <style>
+        .kotak {
+            width: 400px;
+            height: 350px;
+            border: solid 1px black;
+        }
+        .input {
+            width: 350px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="kotak"></div>
+    <input type="text" class="input" /><button class="btn">kirim</button>
+
+    <script>
+        var tombol = document.querySelector(".btn");
+        var kotak = document.querySelector(".kotak");
+        var input = document.querySelector(".input");
+
+        tombol.addEventListener("click", function() {
+            kotak.innerHTML = kotak.innerHTML + "<br>" + input.value;
+            input.value = "";
+        });
+    </script>
+   </body>
+  </html>
